@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "all args passed to the script $@"
+echo "all args passed to the script $*"
 echo "number of args passed to the script $#"
 echo "script name $0"
 echo "present working directory $PWD"
