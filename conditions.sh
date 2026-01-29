@@ -1,6 +1,6 @@
 #!/bin/bash
 NUMBER=10
-if [ $NUMBER -gt 20 ]; then
+if [ $NUMBER -gt 20 ]; then #should use -gt not > it won't give correct output
     echo "$NUMBER is greated than 20"
 elif [ $NUMBER -eq 20 ]; then
     echo "$NUMBER is equal to 20"
