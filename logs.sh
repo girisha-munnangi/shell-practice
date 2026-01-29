@@ -2,7 +2,6 @@
 USERID=$(id -u)
 LOGS_FOLDER="/var/log/shell-script"
 LOGS_FILE="/var/log/shell-script/$0.log"
-mkdir -p "$LOG_FOLDER"
 
 if [ $USERID -ne 0 ]; then
     echo "run with root privilages" | tee -a $LOGS_FILE
