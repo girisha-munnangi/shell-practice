@@ -1,5 +1,5 @@
 #!/bin/bash
-NUMBER=10
+NUMBER=100
 if (( NUMBER > 20 )); then
     echo "$NUMBER is greater than 20"
 elif (( NUMBER == 20 )); then
