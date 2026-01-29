@@ -7,8 +7,8 @@ fi
     echo "installing nginx software"
 dnf install nginx -y
 if [ $? -eq 0 ]; then
-    echo "installation failed"
+    echo "installation success"
     exit 1
 else
-    echo "installation success"
+    echo "installation failed"
 fi
