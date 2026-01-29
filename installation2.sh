@@ -6,25 +6,25 @@ if [ $USERID -ne 0 ]; then
 fi
     echo "installing nginx software"
 dnf install nginx -y
-if [ $? -eq 0 ]; then
-    echo "installation success"
+if [ $? -ne 0 ]; then
+    echo "installation failed"
     exit 1
 else
-    echo "installation failed"
+    echo "installation success"
 fi
 echo "installing mysql software"
 dnf install mysql -y
-if [ $? -eq 0 ];then
-    echo"installation is success"
+if [ $? -ne 0 ];then
+    echo"installation is fail"
     exit 1
 else 
-    echo "installation is failure"
+    echo "installation is success"
 fi
     echo "installing node js"
 dnf install nodejs -y
-if [ $? -eq 0 ]; then
-    echo "installation is success"
+if [ $? -ne 0 ]; then
+    echo "installation is fail"
     exit 1
 else
-    echo "installation is failure"
+    echo "installation is success"
 fi
