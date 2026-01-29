@@ -12,7 +12,7 @@ VALIDATE(){
         echo "$2 is success"
     fi
 }
-    
+     
 dnf install nginx -y
 VALIDATE $? "installing nginx software"
 
