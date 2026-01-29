@@ -1,13 +1,14 @@
 #!/bin/bash
 USERID=$(id -u)
 if [ $USERID -ne 0 ]; then
-echo "run with root privilages"
-exit 1
+    echo "run with root privilages"
+    exit 1
 fi
-echo "installing nginx software"
+    echo "installing nginx software"
 dnf install nginx -y
 if [ $? -eq 0 ]; then
-echo "installation success"
+    echo "installation failed"
+    exit 1
 else
-echo "installation failed"
+    echo "installation success"
 fi
