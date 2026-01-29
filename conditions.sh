@@ -6,3 +6,4 @@ elif [$NUMBER -eq 20];then
 echo "number is equal to 20"
 else
 echo "$NUMBER is less than 20"
+fi
