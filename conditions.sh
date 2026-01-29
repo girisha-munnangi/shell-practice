@@ -1,5 +1,5 @@
 #!/bin/bash
-NUMBER=50
+NUMBER=10
 if [ $NUMBER > 20 ]; then
     echo "$NUMBER is greated than 20"
 elif [ $NUMBER = 20 ]; then
