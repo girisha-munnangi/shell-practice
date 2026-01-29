@@ -2,10 +2,12 @@
 USERID=$(id -u)
 if [ $USERID -ne 0 ]; then
 echo "run with root privilages"
-else
+exit 1
+fi
+
 echo "installing nginx software"
 dnf install nginx -y
-fi
+
 if [ $? -eq 0 ]; then
 echo "installation success"
 else
