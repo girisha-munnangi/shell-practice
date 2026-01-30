@@ -20,7 +20,7 @@ mkdir -p $LOGS_FOLDER
 
 for package in "$@"
 do
-    if rpm -q "$package" &>>"$LOGS_FILE"; then
+    if dnf list installed "$package" &>>"$LOGS_FILE"; then
         echo -e "$package already installed ... SKIPPING"
     else
         echo "$package not installed, installing now"
