@@ -23,7 +23,7 @@ do
     dnf list installed mysql &>>$LOGS_FILE
     if [ $? -ne 0 ]; then
         echo "$package not installed, installing now"
-        dnf install mysqld -y &>>$LOGS_FILE
+        dnf install mysql -y &>>$LOGS_FILE
     else
         echo -e "$package already installed ... $Y SKIPPING $N"
     fi
