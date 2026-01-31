@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash  #trap works perfectly for this script
 
 set -e
 trap 'echo "There is an error in $LINENO, Command: $BASH_COMMAND"' ERR
