@@ -40,7 +40,7 @@ else
     echo -e "Roboshop user already exist ... $Y SKIPPING $N"
 
 fi
-mkdir /app &>>$LOGS_FILE
+mkdir -p /app &>>$LOGS_FILE
 VALIDATE $? "CREATING APP FOLDER"
 curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart-v3.zip &>>$LOGS_FILE
 VALIDATE $? "getting cart service code"
