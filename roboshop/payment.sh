@@ -47,7 +47,7 @@ VALIDATE $? "UNZIPPING CODE"
 cd /app 
 pip3 install -r requirements.txt &>>$LOGS_FILE
 VALIDATE $? "installing pip3 and dependencies"
-cp $SCRIPT_DIR=$PWD/payment.service /etc/systemd/system/payment.service &>>$LOGS_FILE
+cp $SCRIPT_DIR/payment.service /etc/systemd/system/payment.service &>>$LOGS_FILE
 systemctl daemon-reload
 VALIDATE $? "deamon reload"
 systemctl enable payment 
