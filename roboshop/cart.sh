@@ -52,7 +52,7 @@ cd /app
 npm install &>>$LOGS_FILE
 VALIDATE $? "installing npm"
 
-cp $SCRIPT_DIR/cart.service /etc/system/systemd/cart.service
+cp $SCRIPT_DIR/cart.service /etc/systemd/system/cart.service
 VALIDATE $? "copying cart service file"
 systemctl daemon-reload &>>$LOGS_FILE
 VALIDATE $? "deamon reload"
