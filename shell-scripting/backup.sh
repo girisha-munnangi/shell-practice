@@ -42,9 +42,9 @@ if [ -z $FILES ]; then
 else
     log "files found to archieve: $FILES"
     TIMESTAMP=$(date +%F-%H-%M-%S)
-    ZIP_FILE_NAME="$DEST_DIR.tar.gz"
+    ZIP_FILE_NAME="$DEST_DIR/app-logs-$TIMESTAMP.tar.gz"
     log "archieve name : $ZIP_FILE_NAME"
-    tar -cvf $ZIP_FILE_NAME $(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
+    tar -cvf $ZIP_FILE_NAME $FILES
 
     if [ -f $ZIP_FILE_NAME ]; then
         log "Archeival is ... $G SUCCESS $N"
