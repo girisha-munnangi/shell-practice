@@ -12,7 +12,7 @@ DAYS=${3:-14} #here 14 days is deafault if user didn't specified
 if [ $USER_ID -ne 0 ]; then
     echo "run script with root user "
 fi
-mkdir $LOGS_FOLDER
+mkdir -p $LOGS_FOLDER
 log(){
     echo -e "$(date "+%Y-%m-%d %H:%M:%S") | $1" | tee -a $LOGS_FILE
 }
