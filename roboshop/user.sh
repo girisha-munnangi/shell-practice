@@ -52,7 +52,7 @@ cd /app
 npm install &>>$LOGS_FILE
 VALIDATE $? "installing npm"
 
-cp $CRIPT_DIR/user.service /etc/system/systemd/user.service
+cp $SCRIPT_DIR/user.service /etc/system/systemd/user.service
 VALIDATE $? "copying user service file"
 systemctl daemon-reload &>>$LOGS_FILE
 VALIDATE $? "deamon reload"
